@@ -1,0 +1,301 @@
+I want you to help me build an MVP mobile application called "HausaBridge".
+
+PROJECT PURPOSE
+
+HausaBridge is a mobile communication app designed to help English-speaking NYSC corps members, teachers, volunteers and visitors communicate with Hausa-speaking students and people in local communities.
+
+The real problem is that corps members and teachers sometimes struggle to communicate with students and community members because they do not understand Hausa well.
+
+The MVP should focus on practical English ↔ Hausa communication rather than being a generic language-learning application.
+
+TECH STACK
+
+- React Native
+- Expo
+- TypeScript
+- Expo Router for navigation
+- Use a clean component-based architecture
+- Use local data for the MVP
+- The application should work offline for the core phrasebook
+- Do NOT create a backend yet unless it is necessary
+- Structure the code so a Node.js/Express backend can easily be added later
+
+IMPORTANT
+
+Do not over-engineer the MVP.
+
+I want a working, polished mobile application that I can install on my Android phone and test with real students and community members.
+
+DESIGN
+
+Create a modern, simple and friendly mobile UI.
+
+The application should feel like a practical communication tool, not a school textbook.
+
+Use:
+- Clean cards
+- Large readable text
+- Large touch targets
+- Simple icons
+- Good spacing
+- Accessible typography
+- Bottom navigation where appropriate
+- Smooth but subtle animations
+
+The UI should work well on low-to-mid-range Android phones.
+
+PRIMARY NAVIGATION
+
+Create:
+
+1. Home
+2. Phrases
+3. Translate
+4. Favorites
+5. Settings
+
+HOME SCREEN
+
+Display:
+
+HausaBridge
+
+"Break the language barrier."
+
+A search bar:
+
+"Search English or Hausa..."
+
+Then quick actions:
+
+- English → Hausa
+- Hausa → English
+
+Then categories:
+
+- Greetings
+- Classroom
+- Community
+- Daily Conversation
+- Market
+- Directions
+- Emergency
+
+Also show a small section:
+
+"Popular phrases"
+
+PHRASEBOOK
+
+Create a phrase database with this structure:
+
+{
+  id,
+  category,
+  english,
+  hausa,
+  pronunciation,
+  audioUrl,
+  isFavorite
+}
+
+Populate the MVP with realistic starter phrases.
+
+Include at least 10 phrases in each major category.
+
+Categories:
+
+Greetings
+Classroom
+Community
+Daily Conversation
+Market
+Directions
+Emergency
+
+IMPORTANT:
+
+Clearly structure the data so that the Hausa translations can easily be reviewed and replaced by native Hausa speakers later.
+
+Do not claim that AI-generated Hausa translations are authoritative.
+
+PHRASE DETAILS
+
+When the user taps a phrase, show:
+
+English:
+"Good morning"
+
+Hausa:
+"Ina kwana"
+
+Pronunciation:
+"Ina kwana"
+
+Buttons:
+
+🔊 Listen
+⭐ Favorite
+
+The Listen button should use the appropriate audio implementation.
+
+For the MVP, create the audio architecture so recorded native-speaker audio can be added later.
+
+SEARCH
+
+Implement local search.
+
+The user should be able to search:
+
+English:
+"sit down"
+
+and find:
+
+"Zauna"
+
+The user should also be able to search Hausa:
+
+"Zauna"
+
+and find:
+
+"Sit down"
+
+TRANSLATE SCREEN
+
+Create a simple translation interface:
+
+English
+[ Enter text ]
+
+        ↓
+
+Hausa
+[ Translation ]
+
+Include a swap button:
+
+English ↔ Hausa
+
+For the MVP, use the local phrase database for known phrases.
+
+If there is no exact match, clearly show:
+
+"Phrase not available in the offline phrasebook."
+
+Do NOT pretend that an unknown phrase was translated accurately.
+
+Prepare the architecture so an online AI/API translation service can be added later.
+
+FAVORITES
+
+Users should be able to favorite phrases.
+
+Persist favorites locally using an appropriate Expo-compatible storage solution.
+
+OFFLINE SUPPORT
+
+The phrasebook must work without internet.
+
+The user should be able to:
+
+- Browse categories
+- Search phrases
+- Open phrase details
+- Listen to available local audio
+- View favorites
+
+without an internet connection.
+
+SETTINGS
+
+Create a simple settings screen containing:
+
+- About HausaBridge
+- Offline phrasebook
+- Language direction
+- App version
+
+ABOUT SCREEN
+
+Explain:
+
+"HausaBridge was created to help corps members, teachers, volunteers and visitors communicate more easily with Hausa-speaking students and communities."
+
+Do not include exaggerated claims.
+
+ARCHITECTURE
+
+Organize the project cleanly.
+
+Suggested structure:
+
+app/
+components/
+data/
+hooks/
+services/
+types/
+constants/
+assets/
+utils/
+
+Keep translation logic separate from UI.
+
+Keep phrase data separate from components.
+
+Create reusable components such as:
+
+PhraseCard
+CategoryCard
+SearchBar
+AudioButton
+LanguageSelector
+EmptyState
+
+QUALITY
+
+Make sure:
+
+- TypeScript has no unnecessary errors
+- No placeholder screens
+- Navigation works
+- Search works
+- Favorites work
+- Offline data works
+- App doesn't crash when there are no search results
+- UI handles long Hausa phrases properly
+- Buttons have large touch areas
+
+TESTING
+
+After implementing the MVP, explain:
+
+1. How to run it with Expo
+2. How to test it on an Android phone
+3. How to add new Hausa phrases
+4. How to replace translations
+5. How to add recorded Hausa audio
+6. Where future API/AI integration should be added
+
+DO NOT ADD YET
+
+Do not add:
+
+- User authentication
+- Payments
+- Social media
+- Chat
+- Complex backend
+- Admin dashboard
+- AI chatbot
+- Subscription system
+
+These are outside the MVP.
+
+FIRST PRIORITY
+
+Build the complete mobile UI and local phrasebook first.
+
+After that, we will test the application and improve it based on feedback from actual Hausa speakers and students.
